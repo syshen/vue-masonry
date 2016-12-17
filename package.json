@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "lodash": "*",
-    "masonry-layout": "^3.3.2"
+    "masonry-layout": "^4.1.1"
   },
   "devDependencies": {
-    "vue": "^1.0.3"
+    "vue": "^2.1.6"
   },
   "scripts": {
     "build": "browserify -e example/example.js -o example/example.build.js",
