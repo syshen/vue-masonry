@@ -8,8 +8,8 @@
         Vue.directive('masonry', {
             bind: function () {
             },
-            update: function (value) {
-                console.log(value)
+            update: function (el,binding) {
+                console.log(binding.value)  
                 var options = {
                     itemSelector: '.grid-item',
                     columnWidth: 160,
@@ -19,12 +19,12 @@
                     options = _.assign(options, value);
                 }
 
-                if (!this.el.masonry) {
-                    this.el.masonry = new Masonry(this.el, options)
+                if (!el.masonry) {
+                    el.masonry = new Masonry(el, options)
                 }
             },
-            unbind: function () {
-                this.el.masonry = null;
+            unbind: function (el) {
+                el.masonry = null;
             },
         })
     }
