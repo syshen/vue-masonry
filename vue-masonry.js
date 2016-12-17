@@ -9,7 +9,8 @@
             bind: function () {
             },
             update: function (el,binding) {
-                console.log(binding.value)  
+                var value = binding.value
+                console.log(value)  
                 var options = {
                     itemSelector: '.grid-item',
                     columnWidth: 160,
