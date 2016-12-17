@@ -8,7 +8,7 @@
         Vue.directive('masonry', {
             bind: function () {
             },
-            update: function (el,binding) {
+            update: function (el, binding) {
                 var value = binding.value
                 console.log(value)  
                 var options = {
@@ -21,6 +21,7 @@
                 }
 
                 if (!el.masonry) {
+                  console.log(el)
                     el.masonry = new Masonry(el, options)
                 }
             },
